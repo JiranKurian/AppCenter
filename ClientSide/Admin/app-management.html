@@ -10,7 +10,7 @@
     <meta name="keywords" content="au theme template">
 
     <!-- Title Page-->
-    <title>Dashboard</title>
+    <title>App Manager</title>
 
     <!-- Fontfaces CSS-->
     <link href="css/font-face.css" rel="stylesheet" media="all">
@@ -57,23 +57,25 @@
                 <div class="container-fluid">
                     <ul class="navbar-mobile__list list-unstyled">
                         <li>
-                            <a href="admin_home.html">
+                            <a href="index.html">
                                 <i class="fas fa-tachometer-alt"></i>Dashboard</a>
                         </li>
                         <li>
-                            <a href="#">
-                                <i class="fas fa-chart-bar"></i>Reports</a>
-                        </li>
-                        <li class="active"> 
-                            <a href="management.html">
-                                <i class="fas fa-table"></i>Management</a>
+                            <a href="app-management.html">
+                                <i class="fa fa-cloud"></i>App Management</a>
                         </li>
                         <li>
-                            <a href="#">
-                                <i class="fa fa-cloud"></i>Apps</a>
+                            <a href="app-metrics.html">
+                                <i class="fas fa-chart-bar"></i>Apps Metrics</a>
                         </li>
-                        
-                       
+                        <li>
+                            <a href="user-metrics.html">
+                                <i class="fas fa-chart-bar"></i>User Metrics</a>
+                        </li>
+                        <li>
+                            <a href="sales-metrics.html">
+                                <i class="fas fa-chart-bar"></i>Sales Metrics</a>
+                        </li>
                         
                     </ul>
                 </div>
@@ -92,21 +94,25 @@
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
                         
-                        <li>
-                            <a href="admin_home.html">
+                        <li >
+                            <a href="index.html">
                                 <i class="fas fa-tachometer-alt"></i>Dashboard</a>
                         </li>
-                        <li>
-                            <a href="#">
-                                <i class="fas fa-chart-bar"></i>Reports</a>
-                        </li>
                         <li class="active">
-                            <a href="management.html">
-                                <i class="fas fa-table"></i>Management</a>
+                            <a href="app-management.html">
+                                <i class="fa fa-cloud"></i>App Management</a>
                         </li>
                         <li>
-                            <a href="#">
-                                <i class="fa fa-cloud"></i>Apps</a>
+                            <a href="app-metrics.html">
+                                <i class="fas fa-chart-bar"></i>Apps Metrics</a>
+                        </li>
+                        <li>
+                            <a href="user-metrics.html">
+                                <i class="fas fa-chart-bar"></i>User Metrics</a>
+                        </li>
+                        <li>
+                            <a href="sales-metrics.html">
+                                <i class="fas fa-chart-bar"></i>Sales Metrics</a>
                         </li>
                     </ul>
                 </nav>
@@ -122,46 +128,49 @@
                     <div class="container-fluid">
                         
                         <div class="header-wrap">
-                            <form class="form-header" action="" method="POST">
-                                <input class="au-input au-input--xl" type="text" name="search" placeholder="Do we need a search bar????..." />
-                                <button class="au-btn--submit" type="submit">
-                                    <i class="zmdi zmdi-search"></i>
-                                </button>
-                            </form>
-                            <div class="header-button">
-                                <div class="noti-wrap">
-                                   
-                                <div class="account-wrap">
-                                    <div class="account-item clearfix js-item-menu">
-                                        <div class="image">
-                                            <img src="images/icon/avatar-01.jpg" alt="John Doe" />
-                                        </div>
-                                        <div class="content">
-                                            <a class="js-acc-btn" href="#">john doe</a>
-                                        </div>
-                                        <div class="account-dropdown js-dropdown">
-                                            <div class="info clearfix">
-                                                <div class="image">
-                                                    <a href="#">
-                                                        <img src="images/icon/avatar-01.jpg" alt="John Doe" />
-                                                    </a>
-                                                </div>
-                                                <div class="content">
-                                                    <h5 class="name">
-                                                        <a href="#">john doe</a>
-                                                    </h5>
-                                                    <span class="email">johndoe@example.com</span>
-                                                </div>
-                                            </div>
-                                            
-                                            <div class="account-dropdown__footer">
-                                                <a href="#">
-                                                    <i class="zmdi zmdi-power"></i>Logout</a>
-                                            </div>
-                                        </div>
-                                    </div>
+                           <table>
+    <tr>
+        <td style="width: 1350px">
+        
+        </td>
+        <td >
+            <div class="header-button" style="align-items: centre" >
+                <div class="noti-wrap">
+                   
+                <div class="account-wrap">
+                    <div class="account-item clearfix js-item-menu">
+                        <div class="image">
+                            <img src="images/icon/avatar-01.jpg" alt="John Doe" />
+                        </div>
+                        <div class="content">
+                            <a class="js-acc-btn" href="#">john doe</a>
+                        </div>
+                        <div class="account-dropdown js-dropdown">
+                            <div class="info clearfix">
+                                <div class="image">
+                                    <a href="#">
+                                        <img src="images/icon/avatar-01.jpg" alt="John Doe" />
+                                    </a>
+                                </div>
+                                <div class="content">
+                                    <h5 class="name">
+                                        <a href="#">john doe</a>
+                                    </h5>
+                                    <span class="email">johndoe@example.com</span>
                                 </div>
                             </div>
+                            
+                            <div class="account-dropdown__footer">
+                                <a href="#">
+                                    <i class="zmdi zmdi-power"></i>Logout</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>     
+        </td>
+    </tr>
+</table>
                         </div>
                     </div>
                 </div>
@@ -175,7 +184,7 @@
                             <div class="row">
                                     <div class="col-md-12">
                                         <div class="overview-wrap">
-                                            <h2 class="title-1">Management</h2>
+                                            <h2 class="title-1">App Management</h2>
                                             <button class="au-btn au-btn-icon au-btn--blue">
                                                 <i class="zmdi zmdi-plus"></i>Upload APK</button>
                                         </div>
