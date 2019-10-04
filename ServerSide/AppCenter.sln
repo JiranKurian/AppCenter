@@ -9,6 +9,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppCenterBL", "AppCenterBL\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppCenterData", "AppCenterData\AppCenterData.csproj", "{BD0041A9-E2E6-4E8B-9E8D-FC4D337AECEA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppCenterUnitTest", "AppCenterUnitTest\AppCenterUnitTest.csproj", "{BBA7A203-FA8C-4D6E-91F1-83BDF7C57FF8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppCenterIntegrationTest", "AppCenterIntegrationTest\AppCenterIntegrationTest.csproj", "{B1278147-0DA3-47B0-AD49-858771482055}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{BD0041A9-E2E6-4E8B-9E8D-FC4D337AECEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD0041A9-E2E6-4E8B-9E8D-FC4D337AECEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD0041A9-E2E6-4E8B-9E8D-FC4D337AECEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBA7A203-FA8C-4D6E-91F1-83BDF7C57FF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBA7A203-FA8C-4D6E-91F1-83BDF7C57FF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBA7A203-FA8C-4D6E-91F1-83BDF7C57FF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBA7A203-FA8C-4D6E-91F1-83BDF7C57FF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1278147-0DA3-47B0-AD49-858771482055}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1278147-0DA3-47B0-AD49-858771482055}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1278147-0DA3-47B0-AD49-858771482055}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1278147-0DA3-47B0-AD49-858771482055}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
