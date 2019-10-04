@@ -197,122 +197,161 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="overview-wrap">
-                                    <h2 class="title-1">overview</h2>
+                                    <h2 class="title-1">APK Upload</h2>
                                
                                 </div>
                             </div>
                         </div>
-                        <div class="row m-t-25">
-                            <div class="col-sm-6 col-lg-3">
-                                <div class="overview-item overview-item--c1">
-                                    <div class="overview__inner">
-                                        <div class="overview-box clearfix">
-                                            <div class="icon">
-                                                <i class="zmdi zmdi-account-o"></i>
-                                            </div>
-                                            <div class="text">
-                                                <h2>10368</h2> 
-                                                <span>Registered Members</span>
-                                            </div>
-                                        </div>
-                                        <div class="overview-chart">
-                                            <canvas id="widgetChart1"></canvas>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-lg-3">
-                                <div class="overview-item overview-item--c2">
-                                    <div class="overview__inner">
-                                        <div class="overview-box clearfix">
-                                            <div class="icon">
-                                                <i class="zmdi zmdi-shopping-cart"></i>
-                                            </div>
-                                            <div class="text">
-                                                <h2>388,688</h2>
-                                                <span>Apps Sold</span>
-                                            </div>
-                                        </div>
-                                        <div class="overview-chart">
-                                            <canvas id="widgetChart2"></canvas>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-lg-3">
-                                <div class="overview-item overview-item--c3">
-                                    <div class="overview__inner">
-                                        <div class="overview-box clearfix">
-                                            <div class="icon">
-                                                <i class="zmdi zmdi-calendar-note"></i>
-                                            </div>
-                                            <div class="text">
-                                                <h2>1,086</h2>
-                                                <span>Downloads</span>
-                                            </div>
-                                        </div>
-                                        <div class="overview-chart">
-                                            <canvas id="widgetChart3"></canvas>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-lg-3">
-                                <div class="overview-item overview-item--c4">
-                                    <div class="overview__inner">
-                                        <div class="overview-box clearfix">
-                                            <div class="icon">
-                                                <i class="zmdi zmdi-money"></i>
-                                            </div>
-                                            <div class="text">
-                                                <h2>$1,060,386</h2>
-                                                <span>Total earning</span>
-                                            </div>
-                                        </div>
-                                        <div class="overview-chart">
-                                            <canvas id="widgetChart4"></canvas>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    
                         <div class="row">
-                                <div class="col-lg-6">
-                                        <div class="au-card">
-                                            <div class="au-card-inner">
-                                                <h3 class="title-2">App Categories</h3>
-                                                <canvas id="radarChart"></canvas>
-                                            </div>
-                           
-                                    </div>
-                                
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="au-card chart-percent-card">
-                                    <div class="au-card-inner">
-                                        <h3 class="title-2 tm-b-5">Apps by %</h3>
-                                        <div class="row no-gutters">
-                                            <div class="col-xl-6">
-                                                <div class="chart-note-wrap">
-                                                    <div class="chart-note mr-0 d-block">
-                                                        <span class="dot dot--blue"></span>
-                                                        <span>free</span>
+                            <div class="col-md-6 offset-md-3 mr-auto ml-auto">
+                                <section class="card">
+                                  <div class="card-body text-secondary">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <strong>APK Upload</strong> Form
+                                        </div>
+                                        <div class="card-body card-block">
+                                            <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
+                                               
+                                                <div class="row form-group">
+                                                    <div class="col col-md-3">
+                                                        <label for="text-input" class=" form-control-label">App Name</label>
                                                     </div>
-                                                    <div class="chart-note mr-0 d-block">
-                                                        <span class="dot dot--red"></span>
-                                                        <span>paid</span>
+                                                    <div class="col-12 col-md-9">
+                                                        <input type="text" id="text-input" name="text-input" placeholder="" class="form-control">
+                                                    
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-xl-6">
-                                                <div class="percent-chart">
-                                                    <canvas id="percent-chart"></canvas>
+                                                <div class="row form-group">
+                                                    <div class="col col-md-3">
+                                                        <label for="select" class=" form-control-label">Category</label>
+                                                    </div>
+                                                    <div class="col-12 col-md-9">
+                                                        <select name="select" id="select" class="form-control">
+                                                            <option value="0">Please select</option>
+                                                            <option value="1">Option #1</option>
+                                                            <option value="2">Option #2</option>
+                                                            <option value="3">Option #3</option>
+                                                        </select>
+                                                    </div>
                                                 </div>
-                                            </div>
+                                               
+                                                <div class="row form-group">
+                                                    <div class="col col-md-3">
+                                                        <label for="textarea-input" class=" form-control-label">Description</label>
+                                                    </div>
+                                                    <div class="col-12 col-md-9">
+                                                        <textarea name="textarea-input" id="textarea-input" rows="9" placeholder="Content..." class="form-control"></textarea>
+                                                    </div>
+                                                </div>
+                                              
+                                                
+                                               <script>
+                                                                function toggleTextbox(opt)
+                                                                {
+                                                                    document.getElementById('disabled-input').value = '';
+                                                                    if (opt == 'F')
+                                                                        document.getElementById('disabled-input').disabled = false;
+                                                                    else
+                                                                        
+                                                                        document.getElementById('disabled-input').disabled = true;
+                                                                }
+                                                                    </script> 
+                                               </script>
+                                                
+                                                <div class="row form-group">
+                                                    <div class="col col-md-3">
+                                                        <label class=" form-control-label">Premium</label>
+                                                    </div>
+                                                    <div class="col col-md-9">
+                                                        <div class="form-check">
+                                                            <div class="radio">
+                                                                <label for="radio1" class="form-check-label ">
+                                                                    <input type="radio" id="radio1" name="radios" value="option1" class="form-check-input" onclick="toggleTextbox('M')" checked="true">Free
+                                                                </label>
+                                                            </div>
+                                                            <div class="radio">
+                                                                <label for="radio2" class="form-check-label ">
+                                                                    <input type="radio" id="radio2" name="radios" value="option2" class="form-check-input" onclick="toggleTextbox('F')">Paid
+                                                                </label>
+                                                            </div>
+                                                           
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row form-group">
+                                                    <div class="col col-md-3">
+                                                        <label for="disabled-input" class=" form-control-label">Price</label>
+                                                    </div>
+                                                    <div class="col-12 col-md-9">
+                                                        <input type="number" id="disabled-input" name="disabled-input" placeholder="" disabled="" class="form-control">
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="row form-group">
+                                                    <div class="col col-md-3">
+                                                        <label class=" form-control-label">Mature Audience</label>
+                                                    </div>
+                                                    <div class="col col-md-9">
+                                                        <div class="form-check">
+                                                            <div class="checkbox">
+                                                                <label for="checkbox1" class="form-check-label ">
+                                                                    <input type="checkbox" id="checkbox1" name="checkbox1" value="option1" class="form-check-input">18+ Only
+                                                                </label>
+                                                            </div>
+                                                           
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row form-group">
+                                                    <div class="col col-md-3">
+                                                        <label for="file-input" class=" form-control-label">Image Upload</label>
+                                                    </div>
+                                                    <div class="col-12 col-md-9">
+                                                        <input type="file" id="file-input" name="file-input" class="form-control-file">
+                                                    </div>
+                                                </div>
+                                                <div class="row form-group">
+                                                    <div class="col col-md-3">
+                                                        <label for="text-input" class=" form-control-label">Version</label>
+                                                    </div>
+                                                    <div class="col-12 col-md-9">
+                                                            <div class="form-check-inline form-check">
+                                                        <div class="col">
+                                                            <input type="number" id="text-input" name="text-input" placeholder="" class="form-control">
+                                                        </div>
+                                                        <div class="col">
+                                                            <input type="number" id="text-input" name="text-input" placeholder="" class="form-control">
+                                                        </div>
+                                                        <div class="col">
+                                                            <input type="number" id="text-input" name="text-input" placeholder="" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row form-group">
+                                                    <div class="col col-md-3">
+                                                        <label for="file-input" class=" form-control-label">APK Upload</label>
+                                                    </div>
+                                                    <div class="col-12 col-md-9">
+                                                        <input type="file" id="file-input" name="file-input" class="form-control-file">
+                                                    </div>
+                                                </div>
+                                                
+                                            </form>
+                                        </div>
+                                        <div class="card-footer">
+                                            <button type="submit" class="btn btn-primary btn-sm">
+                                                <i class="fa fa-dot-circle-o"></i> Submit
+                                            </button>
+                                            
                                         </div>
                                     </div>
-                                </div>
-                            </div>
+                                  </div>
+                                </section>
+                              </div>
+                   
                         </div>
                         </div>
             <!-- END MAIN CONTENT-->
