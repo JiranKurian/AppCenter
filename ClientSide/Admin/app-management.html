@@ -114,6 +114,10 @@
                             <a href="sales-metrics.html">
                                 <i class="fas fa-chart-bar"></i>Sales Metrics</a>
                         </li>
+                        <li>
+                                <a href="feedback.html">
+                                    <i class="fas fa-envelope"></i>Customer Feedback</a>
+                            </li>
                     </ul>
                 </nav>
             </div>
@@ -185,7 +189,7 @@
                                     <div class="col-md-12">
                                         <div class="overview-wrap">
                                             <h2 class="title-1">App Management</h2>
-                                            <button class="au-btn au-btn-icon au-btn--blue">
+                                            <button onclick="location.href = 'apk-form.html'" class="au-btn au-btn-icon au-btn--blue">
                                                 <i class="zmdi zmdi-plus"></i>Upload APK</button>
                                         </div>
                                     </div>
@@ -200,7 +204,7 @@
                                                 <th>name</th>
                                                 <th>category</th>
                                                 <th>description</th>
-                                                <th>date</th>
+                                                <th>Version</th>
                                                 <th>price</th>
                                                 <th></th>
                                             </tr>
@@ -212,14 +216,16 @@
                                                 <td>
                                                     <span class="block-email">Arcade Game</span>
                                                 </td>
-                                                <td class="desc">Simple one tap</td>
-                                                <td>2018-09-27 02:12</td>
+                                                <td >Simple one tap</td>
+                                                <td class="desc">2.3</td>
                                                 
                                                 <td>Free</td>
                                                 <td>
                                                     <div class="table-data-feature">
-                                                        
-                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
+                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="View" onclick="location.href = 'apk-details.html'">
+                                                            <i class="zmdi zmdi-eye"></i>
+                                                        </button>
+                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Edit" onclick="location.href = 'apk-edit.html'">
                                                             <i class="zmdi zmdi-edit"></i>
                                                         </button>
                                                         <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
