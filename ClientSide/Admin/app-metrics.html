@@ -64,7 +64,7 @@
                             <a href="app-management.html">
                                 <i class="fa fa-cloud"></i>App Management</a>
                         </li>
-                        <li>
+                        <li class="active">
                             <a href="app-metrics.html">
                                 <i class="fas fa-chart-bar"></i>Apps Metrics</a>
                         </li>
@@ -97,7 +97,7 @@
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
                         
-                        <li class="active">
+                        <li >
                             <a href="index.html">
                                 <i class="fas fa-tachometer-alt"></i>Dashboard</a>
                         </li>
@@ -105,7 +105,7 @@
                             <a href="app-management.html">
                                 <i class="fa fa-cloud"></i>App Management</a>
                         </li>
-                        <li>
+                        <li class="active">
                             <a href="app-metrics.html">
                                 <i class="fas fa-chart-bar"></i>Apps Metrics</a>
                         </li>
@@ -204,124 +204,70 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="overview-wrap">
-                                    <h2 class="title-1">overview</h2>
-                               
+                                    <h2 class="title-1">Insights</h2>
+                              
                                 </div>
                             </div>
                         </div>
-                        <div class="row m-t-25">
-                            <div class="col-sm-6 col-lg-3">
-                                <div class="overview-item overview-item--c1">
-                                    <div class="overview__inner">
-                                        <div class="overview-box clearfix">
-                                            <div class="icon">
-                                                <i class="zmdi zmdi-account-o"></i>
-                                            </div>
-                                            <div class="text">
-                                                <h2>10368</h2> 
-                                                <span>Registered Members</span>
-                                            </div>
-                                        </div>
-                                        <div class="overview-chart">
-                                            <canvas id="widgetChart1"></canvas>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-lg-3">
-                                <div class="overview-item overview-item--c2">
-                                    <div class="overview__inner">
-                                        <div class="overview-box clearfix">
-                                            <div class="icon">
-                                                <i class="zmdi zmdi-shopping-cart"></i>
-                                            </div>
-                                            <div class="text">
-                                                <h2>388,688</h2>
-                                                <span>Apps Sold</span>
-                                            </div>
-                                        </div>
-                                        <div class="overview-chart">
-                                            <canvas id="widgetChart2"></canvas>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-lg-3">
-                                <div class="overview-item overview-item--c3">
-                                    <div class="overview__inner">
-                                        <div class="overview-box clearfix">
-                                            <div class="icon">
-                                                <i class="zmdi zmdi-calendar-note"></i>
-                                            </div>
-                                            <div class="text">
-                                                <h2>1,086</h2>
-                                                <span>Downloads</span>
-                                            </div>
-                                        </div>
-                                        <div class="overview-chart">
-                                            <canvas id="widgetChart3"></canvas>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-lg-3">
-                                <div class="overview-item overview-item--c4">
-                                    <div class="overview__inner">
-                                        <div class="overview-box clearfix">
-                                            <div class="icon">
-                                                <i class="zmdi zmdi-money"></i>
-                                            </div>
-                                            <div class="text">
-                                                <h2>$1,060,386</h2>
-                                                <span>Total earning</span>
-                                            </div>
-                                        </div>
-                                        <div class="overview-chart">
-                                            <canvas id="widgetChart4"></canvas>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <br>
                         <div class="row">
                                 <div class="col-lg-6">
-                                        <div class="au-card">
-                                            <div class="au-card-inner">
-                                                <h3 class="title-2">App Categories</h3>
-                                                <canvas id="radarChart"></canvas>
-                                            </div>
+                                        <div class="au-card m-b-30">
+                                                <div class="au-card-inner">
+                                                    <h3 class="title-2 m-b-40">Games in each category</h3>
+                                                    <canvas id="polarChart"></canvas>
+                                                </div>
                            
                                     </div>
                                 
                             </div>
                             <div class="col-lg-6">
-                                <div class="au-card chart-percent-card">
-                                    <div class="au-card-inner">
-                                        <h3 class="title-2 tm-b-5">Apps by %</h3>
-                                        <div class="row no-gutters">
-                                            <div class="col-xl-6">
-                                                <div class="chart-note-wrap">
-                                                    <div class="chart-note mr-0 d-block">
-                                                        <span class="dot dot--blue"></span>
-                                                        <span>free</span>
-                                                    </div>
-                                                    <div class="chart-note mr-0 d-block">
-                                                        <span class="dot dot--red"></span>
-                                                        <span>paid</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xl-6">
-                                                <div class="percent-chart">
-                                                    <canvas id="percent-chart"></canvas>
-                                                </div>
+                                    <div class="au-card m-b-30">
+                                            <div class="au-card-inner">
+                                                <h3 class="title-2 m-b-40">Downloads over time  </h3>
+                                                <canvas id="team-chart"></canvas>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
+                        </div>
+                        </div>
+                        <div class="table-responsive table-responsive-data2">
+                                <table class="table table-data2">
+                                    <thead>
+                                        <tr>
+                                          
+                                            <th>name</th>
+                                            <th>category</th>
+                                            <th>Rating</th>
+                                            <th>Last Update</th>
+                                            <th>Version</th>
+                                            <th>price</th>
+                                            <th>Downloads</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="tr-shadow">
+                                           
+                                            <td>Flappy Bird</td>
+                                            <td>
+                                                <span class="block-email">Arcade Game</span>
+                                            </td>
+                                            <td >4.3</td>
+                                            <td >12/12/12</td>
+                                            <td class="desc">
+                                               2.0.8
+                                                </td> 
+                                            <td>Free</td>
+                                            <td>
+                                               1000
+                                            </td>
+                                        </tr>
+                                        <tr class="spacer"></tr>
+                                        <tr class="tr-shadow">
+                                            
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
-                        </div>
-                        </div>
             <!-- END MAIN CONTENT-->
             <!-- END PAGE CONTAINER-->
         </div>

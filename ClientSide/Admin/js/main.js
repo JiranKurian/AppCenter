@@ -788,7 +788,7 @@
     //Team chart
     var ctx = document.getElementById("team-chart");
     if (ctx) {
-      ctx.height = 150;
+      ctx.height = 199;
       var myChart = new Chart(ctx, {
         type: 'line',
         data: {
@@ -988,7 +988,7 @@
     //line chart
     var ctx = document.getElementById("lineChart");
     if (ctx) {
-      ctx.height = 150;
+      ctx.height = 199;
       var myChart = new Chart(ctx, {
         type: 'line',
         data: {
