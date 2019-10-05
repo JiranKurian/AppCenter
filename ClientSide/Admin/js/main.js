@@ -938,7 +938,7 @@
     //radar chart
     var ctx = document.getElementById("radarChart");
     if (ctx) {
-      ctx.height = 200;
+      ctx.height = 158;
       var myChart = new Chart(ctx, {
         type: 'radar',
         data: {
@@ -950,14 +950,14 @@
               data: [65, 59, 66, 45, 56, 55, 40],
               borderColor: "rgba(0, 123, 255, 0.6)",
               borderWidth: "1",
-              backgroundColor: "rgba(0, 123, 255, 0.4)"
+              backgroundColor: "rgba(100, 123, 255, 0.4)"
             },
             {
               label: "My Second dataset",
               data: [28, 12, 40, 19, 63, 27, 87],
               borderColor: "rgba(0, 123, 255, 0.7",
               borderWidth: "1",
-              backgroundColor: "rgba(0, 123, 255, 0.5)"
+              backgroundColor: "rgba(0, 223, 255, 0.5)"
             }
           ]
         },
