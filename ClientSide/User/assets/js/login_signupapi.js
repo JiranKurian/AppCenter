@@ -9,48 +9,24 @@ async function signUp() {
 	var phone = document.getElementById('phone').value;
 
 	var xmlHttp = new XMLHttpRequest();
-	xmlHttp.open('GET', 'http://127.0.0.1:55842/api/Signup/' + email + '/' + password + '/' + +', false'); // false for synchronous request
+	xmlHttp.open(
+		'GET',
+		'http://127.0.0.1:55842/api/Signup/' +
+			email +
+			'/' +
+			password +
+			'/' +
+			name +
+			'/' +
+			dob +
+			'/' +
+			gender +
+			'/' +
+			phoneNo,
+		false
+	); // false for synchronous request
 	xmlHttp.send();
 	console.log(xmlHttp.responseText);
-}
-
-function signUp() {
-	console.log('Reached function body');
-	var xhr = new XMLHttpRequest();
-	var url = 'http://localhost:55842/api/Signup';
-	xhr.open('POST', url, true);
-	xhr.setRequestHeader('Content-Type', 'application/json');
-	xhr.onreadystatechange = function() {
-		console.log('xhr.readyState=>' + xhr.readyState);
-		console.log('xhr.status=>' + xhr.status);
-		console.log('xhr.responseText=>' + xhr.responseText);
-		if (xhr.readyState === 4 && xhr.status === 200) {
-			var json = JSON.parse(xhr.responseText);
-			console.log(json.id + ', ' + json.name + ', ' + json.description);
-		}
-	};
-	var email = document.getElementById('email').value;
-	var password = document.getElementById('password').value;
-	var name = document.getElementById('uname').value;
-	var dob = document.getElementById('dobyear').value;
-	var gend = document.getElementById('gender');
-
-	var gender = gend.options[gend.selectedIndex].text;
-	var phone = document.getElementById('phone').value;
-
-	var data = JSON.stringify({
-		email    : email,
-		password : password,
-		name     : name,
-		dob      : dob,
-		gender   : gender,
-		phoneNo  : phone
-	});
-	xhr.send(data);
-	console.log(data);
-	//alert('Register success. Please Login');
-	// location.replace("vehicle.html")
-	//window.location.href = 'index.html';
 }
 
 function populateStore() {

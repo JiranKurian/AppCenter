@@ -10,8 +10,8 @@ namespace AppCenterAPI.ViewModels
         public string email { get; set; }
         public string password { get; set; }
         public string name { get; set; }
-        public string dob { get; set; }
+        public int dob { get; set; }
         public string gender { get; set; }
-        public string phoneNo { get; set; }
+        public long phoneNo { get; set; }
     }
 }

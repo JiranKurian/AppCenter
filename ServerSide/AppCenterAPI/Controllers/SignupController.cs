@@ -18,26 +18,19 @@ namespace AppCenterAPI.Controllers
     {
         SignupService signupService = new SignupService();
 
-        // GET: api/Login
-        [HttpGet]
-        public string Get()
+        [HttpGet("{email}/{password}/{name}/{dob}/{gender}/{phoneNo}", Name = "Get")]
+        public HttpResponseMessage Get(string email, string password, string name, int dob, string gender, long phoneNo)
         {
-            return "Hi valikuttan";
+            SignupViewModel signupViewModel = new SignupViewModel();
+            signupViewModel.email = email;
+            signupViewModel.password = password;
+            signupViewModel.name = name;
+            signupViewModel.dob = dob;
+            signupViewModel.gender = gender;
+            signupViewModel.phoneNo = phoneNo;
+
+            return signupService.GetUser(signupViewModel);
         }
 
-        [HttpGet("{id}/{name}", Name = "Gets")]
-        public string Get(int id, string name)
-        {
-            return name + id.ToString();
-            //return signupService.GetUser(signupViewModel);
-        }
-
-        /* // POST api/<controller>
-         [EnableCors("AllowMyOrigin")]
-         [HttpPost]
-         public HttpResponseMessage Post([FromBody] SignupViewModel signupViewModel)
-         {
-             return signupService.GetUser(signupViewModel);
-         }*/
     }
 }
