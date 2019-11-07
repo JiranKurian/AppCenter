@@ -554,7 +554,21 @@
 
     
 <!-- START: Scripts -->
-
+<script>
+        // just for the demos, avoids form submit
+        jQuery.validator.setDefaults({
+          debug: true,
+          success: "valid"
+        });
+        $( "#myform" ).validate({
+          rules: {
+            password: "required",
+            password_again: {
+              equalTo: "#password"
+            }
+          }
+        });
+        </script>
 <!-- Object Fit Polyfill -->
 <script src="assets/vendor/object-fit-images/dist/ofi.min.js"></script>
 
