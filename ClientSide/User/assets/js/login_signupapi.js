@@ -22,15 +22,15 @@ async function signUp() {
 			'/' +
 			gender +
 			'/' +
-			phoneNo,
+			phone,
 		false
 	); // false for synchronous request
 	xmlHttp.send();
 	console.log(xmlHttp.responseText);
 }
 
-/*function populateStore() {
-	var xmlhttp = new XMLHttpRequest();
+function populateStore() {
+	/*var xmlhttp = new XMLHttpRequest();
 	var url = 'http://localhost:8080/vehicles';
 	xmlhttp.open('GET', url, true);
 	xmlhttp.send(null);
@@ -100,5 +100,5 @@ async function signUp() {
 				document.getElementById('appdata').innerHTML = html_text;
 			} else alert('Error e->' + xmlhttp.responseText);
 		}
-	};
-}*/
+	};*/
+}

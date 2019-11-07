@@ -18,7 +18,7 @@ namespace AppCenterAPI.Controllers
     {
         SignupService signupService = new SignupService();
 
-        [HttpGet("{email}/{password}/{name}/{dob}/{gender}/{phoneNo}", Name = "Get")]
+        [HttpGet("{email}/{password}/{name}/{dob}/{gender}/{phoneNo}", Name = "Gets")]
         public HttpResponseMessage Get(string email, string password, string name, int dob, string gender, long phoneNo)
         {
             SignupViewModel signupViewModel = new SignupViewModel();
