@@ -223,7 +223,7 @@
                                                         <label for="text-input" class=" form-control-label">App Name</label>
                                                     </div>
                                                     <div class="col-12 col-md-9">
-                                                        <input type="text" id="text-input" name="text-input" placeholder="" class="form-control">
+                                                        <input type="text" id="appname" name="text-input" placeholder="" class="form-control">
                                                     
                                                     </div>
                                                 </div>
@@ -233,7 +233,7 @@
                                                     </div>
                                                     <div class="col-12 col-md-9">
                                                         <select name="select" id="select" class="form-control">
-                                                            <option value="0">Please select</option>
+                                                            <option value="0" disabled>Please select</option>
                                                             <option value="1">Option #1</option>
                                                             <option value="2">Option #2</option>
                                                             <option value="3">Option #3</option>
@@ -346,7 +346,7 @@
                                             </form>
                                         </div>
                                         <div class="card-footer">
-                                            <button type="submit" class="btn btn-primary btn-sm">
+                                            <button type="button" class="btn btn-primary btn-sm" onclick="apkUpload()">
                                                 <i class="fa fa-dot-circle-o"></i> Submit
                                             </button>
                                             

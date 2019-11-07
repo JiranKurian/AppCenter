@@ -408,7 +408,7 @@
                                             <div class="nk-gap"></div>
                                             <input type="password" value="" name="password" id="password" class="required form-control" placeholder="Password">
                                             <div class="nk-gap"></div>
-                                            <input type="password" value="" name="password" class="required form-control" placeholder="Confirm Password">
+                                            <input type="password" value="" name="password" id="cpassword" class="required form-control" placeholder="Confirm Password">
                                             <div class="nk-gap"></div>
                                             <select name="select" class="required form-control" id="gender">
                                                 <option value="" disabled selected>Select Gender</option>
@@ -473,7 +473,7 @@
                                         </div>
                                         <div class="col-md-6">
                                             <div class="mnt-5">
-                                                <small><a href="#" data-toggle="modal" data-target="#modalReset" onclick="countdown(5);">Forgot your password?</a></small>
+                                                <small><a href="#" data-toggle="modal" data-target="#modalReset" >Forgot your password?</a></small>
                                             </div>
                                            
                                         </div>
@@ -504,8 +504,38 @@
             <div class="modal-content">
                    
                     <div class="nk-gap"></div>
-                    <div class="modal-body">
+                    <div class="modal-body" id="otppage">
                             <form action="#" class="nk-form text-white">
+                                    <div class="row vertical-gap">
+                                        <div class="col-md-12">
+                                                <div class="nk-gap"></div>
+                                               
+                                            Enter email to reset password :
+                
+                                            <div class="nk-gap"></div>
+                                            <div class="nk-gap"></div>
+                                            <div class="nk-gap"></div>
+                                            <input type="email" value="" name="email" id="newemail" class=" form-control" placeholder="Email">
+                
+                                            <div class="nk-gap"></div>
+                                            </div>
+                                            <div class="nk-gap"></div>
+                                            <div class="nk-gap"></div>
+                                            <div class="row vertical-gap">
+                                                    <div class="col-md-12">
+                                                
+                                                            <div class="nk-gap"></div>
+                                                            <div class="nk-gap"></div>
+                                                            <div class="nk-gap"></div>
+                                                            <div class="nk-gap"></div>
+                                                        <a href = "#" class="nk-btn nk-btn-rounded nk-btn-color-white nk-btn-block">Send Otp</a>
+                                                    </div>
+                                                    
+                                                   
+                                                </div>
+                                    </div>
+                                    </form>
+                           <!--  <form action="#" class="nk-form text-white">
                                     <div class="row vertical-gap">
                                         <div class="col-md-12">
                                             Use email OTP and new password:
@@ -538,39 +568,10 @@
                                         <div class="col-md-6"   id="timer">5:00</div>
                                        
                                     </div>
-                                    </div>
+                                    </div> 
                 
-                                    <script type="text/javascript">
-                                        var timeoutHandle;
-                                        function countdown(minutes) {
-                                        //    otpGen();
-                                            var seconds = 60;
-                                            var mins = minutes
-                                            function tick() {
-                                                var counter = document.getElementById("timer");
-                                                var current_minutes = mins-1
-                                                seconds--;
-                                                counter.innerHTML =
-                                                current_minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds);
-                                                if( seconds > 0 ) {
-                                                    timeoutHandle=setTimeout(tick, 1000);
-                                                } else {
-                                        
-                                                    if(mins > 1){
-                                        
-                                                       // countdown(mins-1);   never reach “00″ issue solved:Contributed by Victor Streithorst
-                                                       setTimeout(function () { countdown(mins - 1); }, 1000);
-                                        
-                                                    }
-                                                }
-                                            }
-                                            tick();
-                                        }
-                                        
-                                        
-                                        
-                                        </script>
-                                </form>
+                                    
+                                </form>-->
                     </div>
                         </div>
                         </div>
