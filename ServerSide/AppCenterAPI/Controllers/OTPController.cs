@@ -18,7 +18,6 @@ namespace AppCenterAPI.Controllers
         [HttpGet("{email}", Name = "OTPGet")]
         public ResponseViewModel Get(string email)
         {
-
             OTPService otpService = new OTPService();
 
             return otpService.SendOTP(email);
