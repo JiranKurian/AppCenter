@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace AppCenterAPI.SharedServices
 {
-    public class OTPService
+    public class OTPGenerationService
     {
         public int GenerateOTP()
         {
