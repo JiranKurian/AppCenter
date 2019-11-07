@@ -1,4 +1,5 @@
 function signUp() {
+	console.log('Reached function body');
 	var xhr = new XMLHttpRequest();
 	var url = 'http://localhost:55842/api/Signup';
 	xhr.open('POST', url, true);
