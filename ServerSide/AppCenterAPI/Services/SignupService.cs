@@ -39,7 +39,6 @@ namespace AppCenterAPI.Services
                     emailServiceModel.Body = "You have successfully created your account, Please login to continue...";
 
                     emailService.SendEmail(emailServiceModel);
-
                 }
                 else
                 {
@@ -52,7 +51,6 @@ namespace AppCenterAPI.Services
                 response.httpResponseMessage = new HttpResponseMessage(HttpStatusCode.Conflict);
                 response.message = "Username Already Exist";
             }
-
             return response;
         }
 
