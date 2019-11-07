@@ -82,7 +82,7 @@ function checkNumberFieldLength2(elem) {
 	}
 }
 function otpGen() {
-	/* 	var email = document.getElementById('');
+	var email = document.getElementById('');
 
 	var xmlHttp = new XMLHttpRequest();
 	xmlHttp.open('GET', 'http://127.0.0.1:55842/api/Signup/' + email, false);
@@ -90,47 +90,19 @@ function otpGen() {
 	var httpResponsMessage = JSON.parse(xmlHttp.responseText).httpResponseMessage;
 	var message = JSON.parse(xmlHttp.responseText).message;
 
-	if (httpResponsMessage.statusCode == 200) {
+	/* 	if (httpResponsMessage.statusCode == 200) {
 		//innerHTML
-		document.getElementById('otppage').innerHTML = " <form action=\"#\" class=\"nk-form text-white\"><div class=\"row vertical-gap\"><div class=\"col-md-12\">Enter OTP and new password:<div class=\"nk-gap\"></div>
-				<input type="number" value="" name="password" id="otp" class="required form-control" placeholder="Enter OTP"> 
-				
-				<div class="nk-gap"></div>
-				<input type="password" value="" name="password" id="newpassword" class="required form-control" placeholder="New Password">
-				<div class="nk-gap"></div>
-				<input type="password" value="" name="password" id="cnewpassword" class="required form-control" placeholder="Confirm New Password">
-				<div class="nk-gap"></div> ""
-				
-				
-				
-				
-			
-			</div>
-		   
-		</div>
-		
-		<div class="nk-gap-1"></div>
-		<div class="row vertical-gap">
-			<div class="col-md-6">
-		
-
-				<button class="nk-btn nk-btn-rounded nk-btn-color-white nk-btn-block"> Reset Password </button>
-			</div>
-			<div class="col-md-6"   id="timer">5:00</div>
-		   
-		</div>
-		</div> 
-
-		
-	</form>"; */
+		document.getElementById('otppage').innerHTML = " <form action=\"#\" class=\"nk-form text-white\"><div class=\"row vertical-gap\"><div class=\"col-md-12\">Enter OTP and new password:<div class=\"nk-gap\"></div><input type=\"number\"  name=\"password\" id=\"otp\" class=\"required form-control\" placeholder=\"Enter OTP\"> <div class=\"nk-gap\"></div><input type=\"password\" name=\"password\" id=\"newpassword\" class=\"required form-control\" placeholder=\"New Password\"><div class=\"nk-gap\"></div><input type="password" value="" name="password" id="cnewpassword" class="required form-control" placeholder="Confirm New Password">
+				<div class="nk-gap"></div></div></div>	<div class="nk-gap-1"></div><div class="row vertical-gap"><div class="col-md-6"><button class="nk-btn nk-btn-rounded nk-btn-color-white nk-btn-block"> Reset Password </button></div>
+			<div class="col-md-6"   id="timer">5:00</div></div></div> </form>"
 }
-/* 	else {
+	else {
 		alert(message);
-	}
+	} */
 
 	countdown(5);
 	//otp generation
-} */
+}
 function countdown(minutes) {
 	var seconds = 60;
 	var mins = minutes;
