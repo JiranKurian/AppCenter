@@ -97,23 +97,23 @@
             <ul class="nk-contacts-icons">
                 
               
-                    <script>
-                            if(sessionStorage.sessionUid){
-                                document.getElementById('loginChange').innerHTML ='<li><span>Welcome' +sessionStorage.sessionUser+'</span><span class="fa fa-user"></span></li>'
-    
-                            }
-                            else{
-                                document.getElementById('loginChange').innerHTML ='<li><a href="#" data-toggle="modal" data-target="#modalLogin"><span>Login/Signup</span><span class="fa fa-user"></span> </a></li>'
-                                
-                            }
-                            </script>
+                   
                 
                 <div id="loginChange"> 
                   
                    
                 </div>
                 
-               
+                <script>
+                        if(sessionStorage.sessionUid){
+                            document.getElementById('loginChange').innerHTML ='<li><span>Welcome' +sessionStorage.sessionUser+'</span><span class="fa fa-user"></span></li>'
+
+                        }
+                        else{
+                            document.getElementById('loginChange').innerHTML ='<li><a href="#" data-toggle="modal" data-target="#modalLogin"><span>Login/Signup</span><span class="fa fa-user"></span> </a></li>'
+                            
+                        }
+                        </script>
                 
             </ul>
         </div>
