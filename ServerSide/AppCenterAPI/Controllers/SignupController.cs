@@ -18,8 +18,9 @@ namespace AppCenterAPI.Controllers
     {
         SignupService signupService = new SignupService();
 
-        [HttpGet("{email}/{password}/{name}/{dob}/{gender}/{phoneNo}", Name = "Gets")]
-        public HttpResponseMessage Get(string email, string password, string name, int dob, string gender, long phoneNo)
+        [HttpGet("{email}/{password}/{name}/{dob}/{gender}/{phoneNo}", Name = "SignupGet")]
+
+        public Response Get(string email, string password, string name, int dob, string gender, long phoneNo)
         {
             SignupViewModel signupViewModel = new SignupViewModel();
             signupViewModel.email = email;
@@ -29,7 +30,7 @@ namespace AppCenterAPI.Controllers
             signupViewModel.gender = gender;
             signupViewModel.phoneNo = phoneNo;
 
-            return signupService.GetUser(signupViewModel);
+            return signupService.AddUser(signupViewModel);
         }
 
     }

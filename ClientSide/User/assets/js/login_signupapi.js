@@ -29,6 +29,16 @@ async function signUp() {
 	console.log(xmlHttp.responseText);
 }
 
+async function login() {
+	var email = document.getElementById('email').value;
+	var password = document.getElementById('password').value;
+
+	var xmlHttp = new XMLHttpRequest();
+	xmlHttp.open('GET', 'http://127.0.0.1:55842/api/Signup/' + email + '/' + password, false); // false for synchronous request
+	xmlHttp.send();
+	console.log(xmlHttp.responseText);
+}
+
 function populateStore() {
 	/*var xmlhttp = new XMLHttpRequest();
 	var url = 'http://localhost:8080/vehicles';

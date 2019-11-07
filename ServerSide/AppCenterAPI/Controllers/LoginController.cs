@@ -12,43 +12,12 @@ namespace AppCenterAPI.Controllers
     [Route("api/[controller]")]
     public class LoginController : Controller
     {
-        // GET: api/Login
-        [HttpGet]
-        public string Get()
-        {
-            LoginViewModel loginViewModel = new LoginViewModel();
-
-            loginViewModel.username = "Jiran";
-            loginViewModel.password = "Winston";
-
-
-            LoginService loginService = new LoginService();
-            return loginService.LoginValidation(loginViewModel);
-        }
-
         // GET: api/Login/5
-        [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
+        [HttpGet("{email}/{password}", Name = "Gets")]
+        public string Get(string email, string password)
         {
             return "value";
         }
 
-        // POST: api/Login
-        [HttpPost]
-        public void Post([FromBody] string value)
-        {
-        }
-
-        // PUT: api/Login/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE: api/ApiWithActions/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
     }
 }
