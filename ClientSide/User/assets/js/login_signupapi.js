@@ -38,8 +38,9 @@ async function signUp() {
 		if (httpResponsMessage.statusCode == 201) {
 			alert(message);
 			window.location.href = 'index.html';
+		} else {
+			alert(message);
 		}
-		alert(message);
 
 		console.log(JSON.parse(xmlHttp.responseText));
 	} else {
