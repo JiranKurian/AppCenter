@@ -29,7 +29,7 @@ async function signUp() {
 	console.log(xmlHttp.responseText);
 }
 
-function populateStore() {
+/*function populateStore() {
 	var xmlhttp = new XMLHttpRequest();
 	var url = 'http://localhost:8080/vehicles';
 	xmlhttp.open('GET', url, true);
@@ -101,4 +101,4 @@ function populateStore() {
 			} else alert('Error e->' + xmlhttp.responseText);
 		}
 	};
-}
+}*/
