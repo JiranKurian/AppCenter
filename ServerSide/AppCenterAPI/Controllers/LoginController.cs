@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AppCenterAPI.ViewModels;
 using AppCenterBL.Services;
 using AppCenterBL.ViewModels;
 using Microsoft.AspNetCore.Http;
@@ -13,10 +14,17 @@ namespace AppCenterAPI.Controllers
     public class LoginController : Controller
     {
         // GET: api/Login/5
-        [HttpGet("{email}/{password}", Name = "Gets")]
-        public string Get(string email, string password)
+        [HttpGet("{email}/{password}", Name = "LoginGet")]
+        public Response Get(string email, string password)
         {
-            return "value";
+
+            LoginService loginService = new LoginService();
+
+            LoginViewModel loginViewModel = new LoginViewModel();
+            loginViewModel.username = email;
+            loginViewModel.password = password;
+
+            return loginService.LoginValidation(loginViewModel);
         }
 
     }

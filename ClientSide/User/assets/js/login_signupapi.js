@@ -26,7 +26,10 @@ async function signUp() {
 		false
 	); // false for synchronous request
 	xmlHttp.send();
-	console.log(xmlHttp.responseText);
+	var httpResponsMessage = JSON.parse(xmlHttp.responseText).httpResponsMessage;
+	var message = JSON.parse(xmlHttp.responseText).message;
+
+	console.log(JSON.parse(xmlHttp.responseText));
 }
 
 async function login() {

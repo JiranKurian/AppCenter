@@ -1,4 +1,5 @@
-﻿using AppCenterBL.ViewModels;
+﻿using AppCenterAPI.ViewModels;
+using AppCenterBL.ViewModels;
 
 using System;
 using System.Collections.Generic;
@@ -9,9 +10,13 @@ namespace AppCenterBL.Services
 {
     public class LoginService
     {
-        public string LoginValidation(LoginViewModel loginViewModel)
+        public Response LoginValidation(LoginViewModel loginViewModel)
         {
-            return "shit";
+            Response response = new Response();
+
+            
+
+            return response;
         }
     }
 }
