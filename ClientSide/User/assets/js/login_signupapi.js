@@ -17,7 +17,9 @@ function signUp() {
 	var password = document.getElementById('password').value;
 	var name = document.getElementById('uname').value;
 	var dob = document.getElementById('dobyear').value;
-	var gender = document.getElementById('gender').value;
+	var gend = document.getElementById('gender');
+
+	var gender = gend.options[gend.selectedIndex].text;
 	var phone = document.getElementById('phone').value;
 
 	Console.log(email);
