@@ -88,7 +88,7 @@ function checkNumberFieldLength2(elem) {
 	}
 }
 function otpGen() {
-	var email = document.getElementById('newemail');
+	var email = document.getElementById('newemail').value;
 
 	var xmlHttp = new XMLHttpRequest();
 	xmlHttp.open('GET', 'http://127.0.0.1:55842/api/OTP/' + email, false);
