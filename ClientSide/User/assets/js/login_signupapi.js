@@ -1,18 +1,4 @@
-function signUp() {
-	console.log('Reached function body');
-	var xhr = new XMLHttpRequest();
-	var url = 'http://localhost:55842/api/Signup';
-	xhr.open('POST', url, true);
-	xhr.setRequestHeader('Content-Type', 'application/json');
-	xhr.onreadystatechange = function() {
-		console.log('xhr.readyState=>' + xhr.readyState);
-		console.log('xhr.status=>' + xhr.status);
-		console.log('xhr.responseText=>' + xhr.responseText);
-		if (xhr.readyState === 4 && xhr.status === 200) {
-			var json = JSON.parse(xhr.responseText);
-			console.log(json.id + ', ' + json.name + ', ' + json.description);
-		}
-	};
+async function signUp() {
 	var email = document.getElementById('email').value;
 	var password = document.getElementById('password').value;
 	var name = document.getElementById('uname').value;
@@ -22,16 +8,11 @@ function signUp() {
 	var gender = gend.options[gend.selectedIndex].text;
 	var phone = document.getElementById('phone').value;
 
-	var data = JSON.stringify({
-		email    : email,
-		password : password,
-		name     : name,
-		dob      : dob,
-		gender   : gender,
-		phoneNo  : phone
-	});
-	xhr.send(data);
-	console.log(data);
+	var xmlHttp = new XMLHttpRequest();
+	xmlHttp.open('GET', 'http://127.0.0.1:55842/api/Signup/'+ email +'/''+ +''', false); // false for synchronous request
+	xmlHttp.send();
+	console.log(xmlHttp.responseText);
+
 	//alert('Register success. Please Login');
 	// location.replace("vehicle.html")
 	//window.location.href = 'index.html';

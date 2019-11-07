@@ -18,7 +18,7 @@ namespace AppCenterAPI.Services
             SqlConnection sqlConnection = sqlcon.GetConnection();
 
             sqlConnection.Open();
-            SqlCommand cmd = new SqlCommand("insert into [User] values('" + signupViewModel.name + "'," + signupViewModel.dob + "," + signupViewModel.phoneNo + ",'" + DateTime.Now.ToShortDateString() + "','" + signupViewModel.email + "','" + signupViewModel.password + "','" + signupViewModel.gender + "')", sqlConnection);
+            SqlCommand cmd = new SqlCommand("insert into [User] values('" + signupViewModel.name + "','" + signupViewModel.dob + "','" + signupViewModel.phoneNo + "','" + DateTime.Now.ToShortDateString() + "','" + signupViewModel.email + "','" + signupViewModel.password + "','" + signupViewModel.gender + "')", sqlConnection);
             cmd.ExecuteNonQuery();
             sqlConnection.Close();
 

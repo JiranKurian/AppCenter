@@ -26,12 +26,24 @@ namespace AppCenterAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-          //  services.AddDbContext<AppCenterDBContext>(options => options.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=AppCenterDB;Integrated Security=True"));
+            services.AddCors();
+
+            services.AddCors(options =>
+
+            {
+
+                options.AddPolicy("AllowMyOrigin",
+
+                builder => builder.AllowAnyOrigin());
+
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseCors("AllowMyOrigin");
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
