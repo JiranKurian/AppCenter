@@ -20,13 +20,20 @@ function signUp() {
 	var gender = document.getElementById('gender').value;
 	var phone = document.getElementById('phone').value;
 
+	Console.log(email);
+	Console.log(password);
+	Console.log(name);
+	Console.log(dob);
+	Console.log(gender);
+	Console.log(phone);
+
 	var data = JSON.stringify({
-		email: email,
-		password: password,
-		name: name,
-		dob: dob,
-		gender: gender,
-		phoneNo: phone
+		email    : email,
+		password : password,
+		name     : name,
+		dob      : dob,
+		gender   : gender,
+		phoneNo  : phone
 	});
 	console.log(data);
 	xhr.send(data);
