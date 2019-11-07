@@ -140,37 +140,9 @@
                 </a>
                 
                 <ul class="nk-nav nk-nav-right d-none d-lg-table-cell" data-nav-mobile="#nk-nav-mobile">
-                        <li class="active ">
-                                <a href="index.html">
-                                    Store
-                                    
-                                </a>         
-                            </li>      
-                            <li >
-                                    <a href="library.html">
-                                        My Library
-                                        
-                                    </a>         
-                                </li>  
-        
-        <li>
-            <a href="purchases.html">
-                Purchase History
-                
-            </a>
-        </li>
-        <li class=" ">
-                <a href="feedback.html">
-                    Feedback
-                    
-                </a>         
-            </li>  
-        <li>
-                <a href="#">
-                    signout
-                    
-                </a>
-            </li>
+                    <div id="guest">
+                        </div>
+          
                 </ul>
                 <ul class="nk-nav nk-nav-right nk-nav-icons">
                     
@@ -188,6 +160,21 @@
                 </ul>
             </div>
         </div>
+        <script>
+                if(sessionStorage.sessionUid){
+                    document.getElementById('guest').innerHTML ='<li class="active "> <a href="index.html">Store</a></li>  <li > <a href="library.html"> My Library</a>  </li>  <li><a href="purchases.html">Purchase History  </a> </li><li class=" "> <a href="feedback.html">Feedback</a></li><li><a href="#" onclick="signOut()">signout</a></li>'
+
+                }
+                else{
+                    document.getElementById('guest').innerHTML ='<li class="active "> <a href="index.html">Store</a></li>'
+                    
+                }
+                function signOut()
+                {
+                    sessionStorage.clear();
+                    window.location.href = 'index.html';
+                }
+                </script>
     </nav>
     <!-- END: Navbar -->
 
