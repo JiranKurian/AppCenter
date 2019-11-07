@@ -1,4 +1,5 @@
 var timeoutHandle;
+var resetemail = document.getElementById('newemail').value;
 async function signUp() {
 	var email = document.getElementById('email').value;
 	var password = document.getElementById('password').value;
@@ -88,18 +89,19 @@ function checkNumberFieldLength2(elem) {
 	}
 }
 function otpGen() {
-	var email = document.getElementById('newemail').value;
+	resetemail = document.getElementById('newemail').value;
 
 	var xmlHttp = new XMLHttpRequest();
-	xmlHttp.open('GET', 'http://127.0.0.1:55842/api/OTP/' + email, false);
+	xmlHttp.open('GET', 'http://127.0.0.1:55842/api/OTP/' + resetemail, false);
 	xmlHttp.send();
 	var httpResponsMessage = JSON.parse(xmlHttp.responseText).httpResponseMessage;
 	var message = JSON.parse(xmlHttp.responseText).message;
 
 	if (httpResponsMessage.statusCode == 200) {
 		//innerHTML
+		alert(message);
 		document.getElementById('otppage').innerHTML =
-			' <form action="#" class="nk-form text-white"><div class="row vertical-gap"><div class="col-md-12">Enter OTP and new password:<div class="nk-gap"></div><input type="number"  name="password" id="otp" class="required form-control" placeholder="Enter OTP"> <div class="nk-gap"></div><input type="password" name="password" id="newpassword" class="required form-control" placeholder="New Password"><div class="nk-gap"></div><input type="password" name="password" id="cnewpassword" class="required form-control" placeholder="Confirm New Password"><div class="nk-gap"></div></div></div>	<div class="nk-gap-1"></div><div class="row vertical-gap"><div class="col-md-6"><button class="nk-btn nk-btn-rounded nk-btn-color-white nk-btn-block" onclick="passwordReset()"> Reset Password </button></div><div class="col-md-6"   id="timer">5:00</div></div></div> </form>';
+			' <form action="#" class="nk-form text-white"><div class="row vertical-gap"><div class="col-md-12">Enter OTP and new password:<div class="nk-gap"></div><input type="number"  name="password" id="otp" class="required form-control" placeholder="Enter OTP" oninput="checkNumberFieldLength2(this);"> <div class="nk-gap"></div><input type="password" name="password" id="newpassword" class="required form-control" placeholder="New Password"><div class="nk-gap"></div><input type="password" name="password" id="cnewpassword" class="required form-control" placeholder="Confirm New Password"><div class="nk-gap"></div></div></div>	<div class="nk-gap-1"></div><div class="row vertical-gap"><div class="col-md-6"><button class="nk-btn nk-btn-rounded nk-btn-color-white nk-btn-block" onclick="passwordReset()"> Reset Password </button></div><div class="col-md-6"   id="timer">5:00</div></div></div> </form>';
 		countdown(5);
 	} else {
 		alert(message);
@@ -130,7 +132,20 @@ function countdown(minutes) {
 }
 
 function passwordReset() {
+	newpass = document.getElementById('newpassword').value;
+	cnewpass = document.getElementById('cnewpassword').value;
+	otpcode = document.getElementById('otp').value;
 	//reset code here ie the final button
+	var xmlHttp = new XMLHttpRequest();
+	xmlHttp.open(
+		'GET',
+		'http://127.0.0.1:55842/api/Reset/' + newpass + '/' + passwordReenter + '/' + resetemail + '/' + otpcode,
+		false
+	); // false for synchronous request
+	xmlHttp.send();
+	var httpResponsMessage = JSON.parse(xmlHttp.responseText).httpResponseMessage;
+	var message = JSON.parse(xmlHttp.responseText).message;
+	alert(message);
 }
 
 function populateStore() {
