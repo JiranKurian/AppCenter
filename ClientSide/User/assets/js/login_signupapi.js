@@ -139,7 +139,7 @@ function passwordReset() {
 	var xmlHttp = new XMLHttpRequest();
 	xmlHttp.open(
 		'GET',
-		'http://127.0.0.1:55842/api/Reset/' + newpass + '/' + passwordReenter + '/' + resetemail + '/' + otpcode,
+		'http://127.0.0.1:55842/api/Reset/' + newpass + '/' + cnewpass + '/' + resetemail + '/' + otpcode,
 		false
 	); // false for synchronous request
 	xmlHttp.send();
