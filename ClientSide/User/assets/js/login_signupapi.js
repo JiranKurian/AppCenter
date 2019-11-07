@@ -32,7 +32,7 @@ async function signUp() {
 			false
 		); // false for synchronous request
 		xmlHttp.send();
-		var httpResponsMessage = JSON.parse(xmlHttp.responseText).httpResponsMessage;
+		var httpResponsMessage = JSON.parse(xmlHttp.responseText).httpResponseMessage;
 		var message = JSON.parse(xmlHttp.responseText).message;
 
 		if (httpResponsMessage.statusCode == 201) {
