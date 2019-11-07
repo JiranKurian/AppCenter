@@ -59,7 +59,7 @@ async function login() {
 
 	if (httpResponsMessage.status == 200) {
 		//store session
-
+		alert(message);
 		window.location.href = 'index.html';
 	}
 	console.log(xmlHttp.responseText);
