@@ -22,13 +22,6 @@ function signUp() {
 	var gender = gend.options[gend.selectedIndex].text;
 	var phone = document.getElementById('phone').value;
 
-	Console.log(email);
-	Console.log(password);
-	Console.log(name);
-	Console.log(dob);
-	Console.log(gender);
-	Console.log(phone);
-
 	var data = JSON.stringify({
 		email    : email,
 		password : password,
@@ -37,8 +30,8 @@ function signUp() {
 		gender   : gender,
 		phoneNo  : phone
 	});
-	console.log(data);
 	xhr.send(data);
+	console.log(data);
 	//alert('Register success. Please Login');
 	// location.replace("vehicle.html")
 	//window.location.href = 'index.html';
