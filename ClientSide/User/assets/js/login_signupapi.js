@@ -65,8 +65,12 @@ async function login() {
 		//store session
 		sessionStorage.sessionUid = userid;
 		sessionStorage.sessionUser = username;
-		alert('Login Succesful');
-		window.location.href = 'index.html';
+		if (userid == 4 || userid == 5) {
+			window.location.href = 'Admin/index.html';
+		} else {
+			alert('Login Succesful');
+			window.location.href = 'index.html';
+		}
 	} else {
 		alert(message);
 	}
