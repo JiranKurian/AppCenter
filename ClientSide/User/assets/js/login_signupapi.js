@@ -91,7 +91,7 @@ function otpGen() {
 	var email = document.getElementById('');
 
 	var xmlHttp = new XMLHttpRequest();
-	xmlHttp.open('GET', 'http://127.0.0.1:55842/api/Signup/' + email, false);
+	xmlHttp.open('GET', 'http://127.0.0.1:55842/api/OTP/' + email, false);
 	xmlHttp.send();
 	var httpResponsMessage = JSON.parse(xmlHttp.responseText).httpResponseMessage;
 	var message = JSON.parse(xmlHttp.responseText).message;
