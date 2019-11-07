@@ -10,8 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace AppCenterAPI.Controllers
 {
     [Route("api/[controller]")]
-    [ApiController]
-    public class LoginController : ControllerBase
+    public class LoginController : Controller
     {
         // GET: api/Login
         [HttpGet]
