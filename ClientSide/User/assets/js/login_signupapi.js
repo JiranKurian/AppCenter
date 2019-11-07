@@ -1,6 +1,8 @@
+var timeoutHandle;
 async function signUp() {
 	var email = document.getElementById('email').value;
 	var password = document.getElementById('password').value;
+	var passwordReenter = document.getElementById('cpassword').value;
 	var name = document.getElementById('uname').value;
 	var dob = document.getElementById('dobyear').value;
 	var gend = document.getElementById('gender');
@@ -8,39 +10,92 @@ async function signUp() {
 	var gender = gend.options[gend.selectedIndex].text;
 	var phone = document.getElementById('phone').value;
 
-	var xmlHttp = new XMLHttpRequest();
-	xmlHttp.open(
-		'GET',
-		'http://127.0.0.1:55842/api/Signup/' +
-			email +
-			'/' +
-			password +
-			'/' +
-			name +
-			'/' +
-			dob +
-			'/' +
-			gender +
-			'/' +
-			phone,
-		false
-	); // false for synchronous request
-	xmlHttp.send();
-	var httpResponsMessage = JSON.parse(xmlHttp.responseText).httpResponsMessage;
-	var message = JSON.parse(xmlHttp.responseText).message;
+	var phonenoval = /^\d{10}$/;
+	if (phone.match(phonenoval)) {
+		var xmlHttp = new XMLHttpRequest();
+		xmlHttp.open(
+			'GET',
+			'http://127.0.0.1:55842/api/Signup/' +
+				email +
+				'/' +
+				password +
+				'/' +
+				passwordReenter +
+				'/' +
+				name +
+				'/' +
+				dob +
+				'/' +
+				gender +
+				'/' +
+				phone,
+			false
+		); // false for synchronous request
+		xmlHttp.send();
+		var httpResponsMessage = JSON.parse(xmlHttp.responseText).httpResponsMessage;
+		var message = JSON.parse(xmlHttp.responseText).message;
 
-	console.log(JSON.parse(xmlHttp.responseText));
+		alert(message);
+		console.log(JSON.parse(xmlHttp.responseText));
+	} else {
+		alert('Phone number must be 10 digits');
+	}
 }
 
 async function login() {
-	var email = document.getElementById('email').value;
-	var password = document.getElementById('password').value;
+	var email = document.getElementById('semail').value;
+	var password = document.getElementById('spassword').value;
 
 	var xmlHttp = new XMLHttpRequest();
 	xmlHttp.open('GET', 'http://127.0.0.1:55842/api/Signup/' + email + '/' + password, false); // false for synchronous request
 	xmlHttp.send();
+	var httpResponsMessage = JSON.parse(xmlHttp.responseText).httpResponsMessage;
+	var message = JSON.parse(xmlHttp.responseText).message;
+
+	if (httpResponsMessage.status == 200) {
+		//store session
+
+		window.location.href = 'index.html';
+	}
 	console.log(xmlHttp.responseText);
 }
+
+function checkNumberFieldLength(elem) {
+	if (elem.value.length > 4) {
+		elem.value = elem.value.slice(0, 4);
+	}
+}
+function checkNumberFieldLength1(elem) {
+	if (elem.value.length > 10) {
+		elem.value = elem.value.slice(0, 10);
+	}
+}
+function otpGen() {
+	function countdown(minutes) {
+		//    otpGen();
+		var seconds = 60;
+		var mins = minutes;
+		function tick() {
+			var counter = document.getElementById('timer');
+			var current_minutes = mins - 1;
+			seconds--;
+			counter.innerHTML = current_minutes.toString() + ':' + (seconds < 10 ? '0' : '') + String(seconds);
+			if (seconds > 0) {
+				timeoutHandle = setTimeout(tick, 1000);
+			} else {
+				if (mins > 1) {
+					// countdown(mins-1);   never reach “00″ issue solved:Contributed by Victor Streithorst
+					setTimeout(function() {
+						countdown(mins - 1);
+					}, 1000);
+				}
+			}
+		}
+		tick();
+	}
+}
+
+function passwordReset() {}
 
 function populateStore() {
 	/*var xmlhttp = new XMLHttpRequest();
