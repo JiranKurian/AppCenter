@@ -62,6 +62,8 @@ async function login() {
 
 	if (httpResponsMessage.statusCode == 200) {
 		//store session
+		sessionStorage.sessionUid = userid;
+		sessionStorage.sessionUser = username;
 		alert('Login Succesful');
 		window.location.href = 'index.html';
 	} else {

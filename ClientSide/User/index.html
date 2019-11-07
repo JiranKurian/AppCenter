@@ -97,13 +97,20 @@
             <ul class="nk-contacts-icons">
                 
               
+                    <script>
+                            if(sessionStorage.sessionUid){
+                                document.getElementById('otppage').innerHTML ='<span>Welcome' +sessionStorage.sessionUser+'</span><span class="fa fa-user"></span>'
+    
+                            }
+                            else{
+                                document.getElementById('otppage').innerHTML ='<a href="#" data-toggle="modal" data-target="#modalLogin"><span>Login/Signup</span><span class="fa fa-user"></span> </a>'
+                                
+                            }
+                            </script>
                 
-                
-                <li>
-                    <a href="#" data-toggle="modal" data-target="#modalLogin">
-                        <span>Login/Signup</span>
-                        <span class="fa fa-user"></span>
-                    </a>
+                <li id="loginChange"> 
+                  
+                   
                 </li>
                 
                
