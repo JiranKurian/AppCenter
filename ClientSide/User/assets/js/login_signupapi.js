@@ -54,7 +54,7 @@ async function login() {
 	var xmlHttp = new XMLHttpRequest();
 	xmlHttp.open('GET', 'http://127.0.0.1:55842/api/Signup/' + email + '/' + password, false); // false for synchronous request
 	xmlHttp.send();
-	var httpResponsMessage = JSON.parse(xmlHttp.responseText).httpResponseMessage;
+	var httpResponsMessage = JSON.parse(xmlHttp.responseText).httpResponseMessage; //uyguy
 	var message = JSON.parse(xmlHttp.responseText).message;
 
 	if (httpResponsMessage.status == 200) {
