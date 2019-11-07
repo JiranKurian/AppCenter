@@ -1,5 +1,5 @@
 var timeoutHandle;
-var resetemail = document.getElementById('newemail').value;
+var resetemail;
 async function signUp() {
 	var email = document.getElementById('email').value;
 	var password = document.getElementById('password').value;
