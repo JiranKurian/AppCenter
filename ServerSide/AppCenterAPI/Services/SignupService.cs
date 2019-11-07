@@ -8,6 +8,8 @@ using System.Net;
 using System.Data.SqlClient;
 using AppCenterAPI.StaticData;
 using AppCenterAPI.SharedServices;
+using AppCenterBL.SharedServices;
+using AppCenterBL.ServiceModels;
 
 namespace AppCenterAPI.Services
 {
@@ -16,9 +18,11 @@ namespace AppCenterAPI.Services
         HashService hashService = new HashService();
         SqlCon sqlcon = new SqlCon();
 
-        public Response AddUser(SignupViewModel signupViewModel)
+        public ResponseViewModel AddUser(SignupViewModel signupViewModel)
         {
-            Response response = new Response();
+            ResponseViewModel response = new ResponseViewModel();
+            EmailService emailService = new EmailService();
+            EmailServiceModel emailServiceModel = new EmailServiceModel();
 
             if (CheckUserName(signupViewModel.email))
             {
@@ -27,7 +31,15 @@ namespace AppCenterAPI.Services
                 if ( message == "true")
                 {
                     response.httpResponseMessage = new HttpResponseMessage(HttpStatusCode.Created);
-                    response.message = "User Created";
+                    response.message = "Signup Successful";
+
+                    emailServiceModel.ToAddress = signupViewModel.email;
+                    emailServiceModel.Subject = "Welcome to AppCenter";
+                    emailServiceModel.HtmlBody = false;
+                    emailServiceModel.Body = "You have successfully created your account, Please login to continue...";
+
+                    emailService.SendEmail(emailServiceModel);
+
                 }
                 else
                 {

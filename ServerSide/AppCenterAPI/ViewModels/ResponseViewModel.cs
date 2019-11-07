@@ -6,9 +6,12 @@ using System.Threading.Tasks;
 
 namespace AppCenterAPI.ViewModels
 {
-    public class Response
+    public class ResponseViewModel
     {
         public HttpResponseMessage httpResponseMessage { get; set; }
         public string message { get; set; }
+
+        public int? UserId { get; set; }
+        public string? UserName { get; set; }
     }
 }

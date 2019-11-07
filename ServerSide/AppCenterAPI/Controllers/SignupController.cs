@@ -18,20 +18,34 @@ namespace AppCenterAPI.Controllers
     {
         SignupService signupService = new SignupService();
 
-        [HttpGet("{email}/{password}/{name}/{dob}/{gender}/{phoneNo}", Name = "SignupGet")]
-
-        public Response Get(string email, string password, string name, int dob, string gender, long phoneNo)
+        [HttpGet("{email}/{password}/{passwordReenter}/{name}/{dob}/{gender}/{phoneNo}", Name = "SignupGet")]
+        public ResponseViewModel Get(string email, string password, string passwordReenter, string name, int dob, string gender, long phoneNo)
         {
-            SignupViewModel signupViewModel = new SignupViewModel();
-            signupViewModel.email = email;
-            signupViewModel.password = password;
-            signupViewModel.name = name;
-            signupViewModel.dob = dob;
-            signupViewModel.gender = gender;
-            signupViewModel.phoneNo = phoneNo;
+            PasswordValidationServiceModel passwordValidationViewModel = new PasswordValidationServiceModel();
+            passwordValidationViewModel.password = password;
+            passwordValidationViewModel.passwordReenter = passwordReenter;
 
-            return signupService.AddUser(signupViewModel);
+            PasswordValidationService passwordValidationService = new PasswordValidationService();
+            ResponseViewModel responseViewModel = new ResponseViewModel();
+
+            responseViewModel = passwordValidationService.PasswordValidation(passwordValidationViewModel);
+
+            if (string.Equals(responseViewModel.message, "Validation Successful"))
+            {
+                SignupViewModel signupViewModel = new SignupViewModel();
+                signupViewModel.email = email;
+                signupViewModel.password = password;
+                signupViewModel.name = name;
+                signupViewModel.dob = dob;
+                signupViewModel.gender = gender;
+                signupViewModel.phoneNo = phoneNo;
+
+                return signupService.AddUser(signupViewModel);
+            }
+            else
+            {
+                return responseViewModel;
+            }
         }
-
     }
 }

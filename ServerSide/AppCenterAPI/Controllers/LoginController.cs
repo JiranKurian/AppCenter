@@ -15,7 +15,7 @@ namespace AppCenterAPI.Controllers
     {
         // GET: api/Login/5
         [HttpGet("{email}/{password}", Name = "LoginGet")]
-        public Response Get(string email, string password)
+        public ResponseViewModel Get(string email, string password)
         {
 
             LoginService loginService = new LoginService();
