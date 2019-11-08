@@ -30,7 +30,7 @@ namespace AppCenterAPI.Services
                 feedbackServiceModel.Id = int.Parse(reader["Id"].ToString());
                 feedbackServiceModel.name = reader["Name"].ToString();
                 feedbackServiceModel.email = reader["Email"].ToString();
-                feedbackServiceModel.date = Convert.ToDateTime(reader["Date"].ToString()).ToShortDateString();
+                feedbackServiceModel.date = Convert.ToDateTime(reader["Date"].ToString()).ToString();
                 feedbackServiceModel.status = reader["FeedbackStatus"].ToString();
                 
                 model.Add(feedbackServiceModel);
