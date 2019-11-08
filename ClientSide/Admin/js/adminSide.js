@@ -25,7 +25,7 @@ function feedbackload() {
 		} else {
 			var classcode = 'class="status--denied">Pending';
 		}
-		document.getElementById('fillfeed').innerHTML =
+		document.getElementById('fillfeed').innerHTML +=
 			' <tr class="tr-shadow" ><td>' +
 			element.name +
 			'</td><td><span class="block-email">' +
