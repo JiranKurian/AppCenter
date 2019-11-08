@@ -42,5 +42,13 @@ function feedbackload() {
 function loadfeedback(id) {
 	var msgid = id;
 	window.location.href = 'feedback-response.html?' + id;
+	localStorage.setItem('MessId', msgid);
 	console.log(msgid);
+}
+function messageget() {
+	var msgcode = parseInt(localStorage.getItem('MessId'));
+	var xmlHttp = new XMLHttpRequest();
+	xmlHttp.open('GET', 'http://127.0.0.1:55842/api/Message/' + msgcode, false); // false for synchronous request
+	xmlHttp.send();
+	var httpResponsMessage = JSON.parse(xmlHttp.responseText).httpResponseMessage;
 }
