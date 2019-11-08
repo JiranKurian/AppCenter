@@ -942,18 +942,18 @@
       var myChart = new Chart(ctx, {
         type: 'radar',
         data: {
-          labels: [["Eating", "Dinner"], ["Drinking", "Water"], "Sleeping", ["Designing", "Graphics"], "Coding", "Cycling", "Running"],
+          labels: [["Productivity", "Entertainment"], ["Games", "Tools"], "Audio", ["Art", "Auto"], "Coding", "Dating", "Educational"],
           defaultFontFamily: 'Poppins',
           datasets: [
             {
-              label: "My First dataset",
+              label: "Free",
               data: [65, 59, 66, 45, 56, 55, 40],
               borderColor: "rgba(0, 123, 255, 0.6)",
               borderWidth: "1",
               backgroundColor: "rgba(100, 123, 255, 0.4)"
             },
             {
-              label: "My Second dataset",
+              label: "Paid",
               data: [28, 12, 40, 19, 63, 27, 87],
               borderColor: "rgba(0, 123, 255, 0.7",
               borderWidth: "1",
