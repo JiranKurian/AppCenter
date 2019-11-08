@@ -41,5 +41,6 @@ function feedbackload() {
 }
 function loadfeedback(id) {
 	var msgid = id;
+	window.location.href = 'feedback-response.html/' + id;
 	console.log(msgid);
 }
