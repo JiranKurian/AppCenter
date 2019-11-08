@@ -14,7 +14,7 @@ namespace AppCenterAPI.Services
     [ApiController]
     public class ResetController : Controller
     {
-        [HttpGet("{password}/{passwordReenter}/{email}/{otp}", Name = "PasswordReenerGet")]
+        [HttpGet("{password}/{passwordReenter}/{email}/{otp}", Name = "ResetGet")]
         public ResponseViewModel Get(string password, string passwordReenter, string email, int otp)
         {
             ResponseViewModel responseViewModel = new ResponseViewModel();

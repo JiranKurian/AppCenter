@@ -152,10 +152,10 @@ function passwordReset() {
 	alert(message);
 }
 function sendfeedback() {
-	var usId = sessionStorage.sessionUser;
-	var msgg = document.getElementById('feedbackmsg');
+	var usId = sessionStorage.sessionUid;
+	var msgg = document.getElementById('feedbackmsg').value;
 	var xmlHttp = new XMLHttpRequest();
-	xmlHttp.open('GET', 'http://127.0.0.1:55842/api/UserFeedback/' + usId + '/' + cmsgg, false); // false for synchronous request
+	xmlHttp.open('GET', 'http://127.0.0.1:55842/api/UserFeedback/' + usId + '/' + msgg, false); // false for synchronous request
 	xmlHttp.send();
 	var httpResponsMessage = JSON.parse(xmlHttp.responseText).httpResponseMessage;
 	var message = JSON.parse(xmlHttp.responseText).message;
