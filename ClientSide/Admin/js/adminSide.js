@@ -16,17 +16,14 @@ function feedbackload() {
 
 	console.log(xmlHttp.responseText);
 
-	/*var JsonArray = JSON.parse(xmlHttp.responseText);
+	var JsonArray = JSON.parse(xmlHttp.responseText);
 	console.log(JsonArray);
-<<<<<<< HEAD
 
-	JsonArray.forEach((element) => {});*/
-=======
 	JsonArray.forEach((element) => {
-		if (element.status == processed) {
+		if (element.status == 'processed') {
 			var classcode = 'class="status--process">Processed';
 		} else {
-			var classcode = 'class="denied">Pending';
+			var classcode = 'class="status--denied">Pending';
 		}
 		document.getElementById('fillfeed').innerHTML =
 			' <tr class="tr-shadow" ><td>' +
@@ -45,7 +42,4 @@ function feedbackload() {
 function loadfeedback(id) {
 	var msgid = id;
 	console.log(msgid);
->>>>>>> ece1e4391db09f0d80a84aaa981d6354eebb3eb8
-
-	
 }
