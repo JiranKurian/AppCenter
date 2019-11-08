@@ -697,8 +697,8 @@
           type: 'line',
           defaultFontFamily: 'Poppins',
           datasets: [{
-            label: "Foods",
-            data: [0, 30, 10, 120, 50, 63, 10],
+            label: "Paid",
+            data: [0, 30, 10, 120, 50, 63, 40],
             backgroundColor: 'transparent',
             borderColor: 'rgba(220,53,69,0.75)',
             borderWidth: 3,
@@ -707,7 +707,7 @@
             pointBorderColor: 'transparent',
             pointBackgroundColor: 'rgba(220,53,69,0.75)',
           }, {
-            label: "Electronics",
+            label: "Free",
             data: [0, 50, 40, 80, 40, 79, 120],
             backgroundColor: 'transparent',
             borderColor: 'rgba(40,167,69,0.75)',
@@ -792,12 +792,12 @@
       var myChart = new Chart(ctx, {
         type: 'line',
         data: {
-          labels: ["2010", "2011", "2012", "2013", "2014", "2015", "2016"],
+          labels: ["Q1", "Q2", "Q3", "Q4"],
           type: 'line',
           defaultFontFamily: 'Poppins',
           datasets: [{
-            data: [0, 7, 3, 5, 2, 10, 7],
-            label: "Expense",
+            data: [5, 10, 22,39],
+            label: "Sales",
             backgroundColor: 'rgba(0,103,255,.15)',
             borderColor: 'rgba(0,103,255,0.5)',
             borderWidth: 3.5,
@@ -996,14 +996,14 @@
           defaultFontFamily: "Poppins",
           datasets: [
             {
-              label: "My First dataset",
+              label: "Free",
               borderColor: "rgba(0,0,0,.09)",
               borderWidth: "1",
               backgroundColor: "rgba(0,0,0,.07)",
               data: [22, 44, 67, 43, 76, 45, 12]
             },
             {
-              label: "My Second dataset",
+              label: "Paid",
               borderColor: "rgba(0, 123, 255, 0.9)",
               borderWidth: "1",
               backgroundColor: "rgba(0, 123, 255, 0.5)",
@@ -1131,9 +1131,9 @@
 
           }],
           labels: [
-            "Green",
-            "Green",
-            "Green"
+            "<18",
+            "18-25",
+            "25+"
           ]
         },
         options: {
@@ -1175,10 +1175,10 @@
 
           }],
           labels: [
-            "Green",
-            "Green",
-            "Green",
-            "Green"
+            "Productivity",
+            "Gaming",
+            "Tools",
+            "Misc"
           ]
         },
         options: {
