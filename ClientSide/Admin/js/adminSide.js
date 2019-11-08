@@ -85,5 +85,5 @@ function feedbackreply() {
 	); // false for synchronous request
 	xmlHttp.send();
 	var ResponsMessage = JSON.parse(xmlHttp.responseText);
-	alert(message);
+	alert(ResponsMessage.message);
 }
