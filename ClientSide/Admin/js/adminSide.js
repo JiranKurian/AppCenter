@@ -80,7 +80,7 @@ function feedbackreply() {
 			'/' +
 			msgdat +
 			'/' +
-			MessId,
+			msgcode,
 		false
 	); // false for synchronous request
 	xmlHttp.send();
