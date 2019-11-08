@@ -17,34 +17,26 @@ function feedbackload() {
 	var JsonArray = JSON.parse(xmlHttp.responseText);
 	console.log(JsonArray);
 	JsonArray.forEach((element) => {
-        document.getElementById('fillfeed').innerHTML =' <tr class="tr-shadow" >
-                                           
-        <td>user name</td>
-        <td>
-            <span class="block-email">user mail id</span>
-        </td>
-        <td >11/11/11</td>
-        
-        <td ><span class="status--process">Processed/Pending</span> <!-- class="denied" -->
-            </td> 
-        
-        <td>
-            <div class="table-data-feature">
-                <button class="item" data-toggle="tooltip" data-placement="top" title="View" onclick="loadfeedback(id)">
-                    <i class="fas fa-gavel"></i>
-                </button>
-                
-             
-            </div>
-        </td>
-    </tr>
-    <tr class="spacer"></tr>
-    <tr class="tr-shadow">
-        
-    </tr>'
-    });
+		if (element.status == processed) {
+			var classcode = 'class="status--process">Processed';
+		} else {
+			var classcode = 'class="denied">Pending';
+		}
+		document.getElementById('fillfeed').innerHTML =
+			' <tr class="tr-shadow" ><td>' +
+			element.name +
+			'</td><td><span class="block-email">' +
+			element.email +
+			'</span></td><td >' +
+			element.date +
+			'</td><td ><span ' +
+			classcode +
+			'</span> <!-- class="denied" --></td> <td><div class="table-data-feature"><button class="item" data-toggle="tooltip" data-placement="top" title="View" onclick="loadfeedback(' +
+			element.id +
+			')"><i class="fas fa-gavel"></i> </button> </div></td> </tr><tr class="spacer"></tr><tr class="tr-shadow"> </tr>';
+	});
 }
-function loadfeedback(id)
-{
-    
+function loadfeedback(id) {
+	var msgid = id;
+	console.log(msgid);
 }
