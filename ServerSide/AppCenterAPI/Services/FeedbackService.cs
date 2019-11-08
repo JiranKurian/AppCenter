@@ -14,7 +14,9 @@ namespace AppCenterAPI.Services
 
         public List<FeedbackServiceModel> GetFeedbackList()
         {
-            List<FeedbackServiceModel> model;
+            List<FeedbackServiceModel> model = new List<FeedbackServiceModel>();
+
+            int temp = 0;
 
             SqlConnection sqlConnection = sqlcon.GetConnection();
             sqlConnection.Open();
@@ -22,17 +24,20 @@ namespace AppCenterAPI.Services
             SqlDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
             {
+  
                 FeedbackServiceModel feedbackServiceModel = new FeedbackServiceModel();
-                feedbackServiceModel.Id = int.Parse(reader["[Feedback].Id"].ToString());
-                feedbackServiceModel.name = reader["[User].Name"].ToString();
-                feedbackServiceModel.email = reader["[User].Email"].ToString();
-                feedbackServiceModel.date = Convert.ToDateTime(reader["[Feedback].Date"].ToString()).ToShortDateString();
 
+                feedbackServiceModel.Id = int.Parse(reader["Id"].ToString());
+                feedbackServiceModel.name = reader["Name"].ToString();
+                feedbackServiceModel.email = reader["Email"].ToString();
+                feedbackServiceModel.date = Convert.ToDateTime(reader["Date"].ToString()).ToShortDateString();
+                feedbackServiceModel.status = reader["FeedbackStatus"].ToString();
+                
+                model.Add(feedbackServiceModel);
             }
             sqlConnection.Close();
 
-
-            return;
+            return model;
         }
     }
 }

@@ -14,7 +14,10 @@ function feedbackload() {
 	xmlHttp.open('GET', 'http://127.0.0.1:55842/api/Feedback', false); // false for synchronous request
 	xmlHttp.send();
 
-	var JsonArray = JSON.parse(xmlHttp.responseText);
+	console.log(xmlHttp.responseText);
+
+	/*var JsonArray = JSON.parse(xmlHttp.responseText);
 	console.log(JsonArray);
-	JsonArray.forEach((element) => {});
+
+	JsonArray.forEach((element) => {});*/
 }
