@@ -50,5 +50,10 @@ function messageget() {
 	var xmlHttp = new XMLHttpRequest();
 	xmlHttp.open('GET', 'http://127.0.0.1:55842/api/Message/' + msgcode, false); // false for synchronous request
 	xmlHttp.send();
-	var httpResponsMessage = JSON.parse(xmlHttp.responseText).httpResponseMessage;
+	var ResponsMessage = JSON.parse(xmlHttp.responseText);
+
+	document.getElementById('msgname').innerText = ResponsMessage.name;
+	document.getElementById('msgemail').innerText = ResponsMessage.email;
+	document.getElementById('msgdate').innerText = ResponsMessage.date;
+	document.getElementById('msgmsg').innerText = ResponsMessage.message;
 }
