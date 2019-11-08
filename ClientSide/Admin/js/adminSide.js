@@ -64,7 +64,7 @@ function messageget() {
 function feedbackreply() {
 	var usermail = localStorage.getItem('MessMail');
 	var usermessage = localStorage.getItem('MessRec');
-	var replymsg = getElementById('replymsg').value;
+	var rplymsg = getElementById('replymsg').value;
 	var msgdat = localStorage.getItem('MessDate');
 	var msgcode = parseInt(localStorage.getItem('MessId'));
 
@@ -76,7 +76,7 @@ function feedbackreply() {
 			'/' +
 			usermessage +
 			'/' +
-			replymsg +
+			rplymsg +
 			'/' +
 			msgdat +
 			'/' +
