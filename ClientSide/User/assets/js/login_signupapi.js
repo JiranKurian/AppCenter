@@ -151,7 +151,16 @@ function passwordReset() {
 	var message = JSON.parse(xmlHttp.responseText).message;
 	alert(message);
 }
-
+function sendfeedback() {
+	var usId = sessionStorage.sessionUser;
+	var msgg = document.getElementById('feedbackmsg');
+	var xmlHttp = new XMLHttpRequest();
+	xmlHttp.open('GET', 'http://127.0.0.1:55842/api/UserFeedback/' + usId + '/' + cmsgg, false); // false for synchronous request
+	xmlHttp.send();
+	var httpResponsMessage = JSON.parse(xmlHttp.responseText).httpResponseMessage;
+	var message = JSON.parse(xmlHttp.responseText).message;
+	alert(message);
+}
 function populateStore() {
 	/*var xmlhttp = new XMLHttpRequest();
 	var url = 'http://localhost:8080/vehicles';
