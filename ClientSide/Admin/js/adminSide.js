@@ -56,4 +56,24 @@ function messageget() {
 	document.getElementById('msgemail').innerText = ResponsMessage.email;
 	document.getElementById('msgdate').innerText = ResponsMessage.date;
 	document.getElementById('msgmsg').innerText = ResponsMessage.message;
+
+	localStorage.setItem('MessMail', ResponsMessage.email);
+	localStorage.setItem('MessRec', ResponsMessage.message);
+	localStorage.setItem('MessDate', ResponsMessage.date);
+}
+function feedbackreply() {
+	var usermail = localStorage.getItem('MessMail');
+	var usermessage = localStorage.getItem('MessRec');
+	var replymsg = getElementById('replymsg').value;
+	var msgdat = localStorage.getItem('MessDate');
+
+	var xmlHttp = new XMLHttpRequest();
+	xmlHttp.open(
+		'GET',
+		'http://127.0.0.1:55842/api/Reply/' + usermail + '/' + usermessage + '/' + replymsg + '/' + msgdat,
+		false
+	); // false for synchronous request
+	xmlHttp.send();
+	var ResponsMessage = JSON.parse(xmlHttp.responseText);
+	alert(message);
 }
