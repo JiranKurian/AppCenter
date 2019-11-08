@@ -167,6 +167,13 @@
                                                                 <div class="account-dropdown__footer">
                                                                     <a href="#">
                                                                         <i class="zmdi zmdi-power" onclick="logOut()"></i>Logout</a>
+                                                                        <script>
+                                                                            function logOut()
+                                                                            {
+                                                                                sessionStorage.clear();
+                                                                                window.location.href = '../User/index.html';
+                                                                            }
+                                                                        </script> 
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -175,13 +182,7 @@
                                             </td>
                                         </tr>
                                     </table>  
-                                    <script>
-                                        function logOut()
-                                        {
-                                            sessionStorage.clear();
-                                            window.location.href = '../User/index.html';
-                                        }
-                                    </script> 
+                                  
 
 
 

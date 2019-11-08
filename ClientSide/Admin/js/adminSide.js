@@ -66,11 +66,21 @@ function feedbackreply() {
 	var usermessage = localStorage.getItem('MessRec');
 	var replymsg = getElementById('replymsg').value;
 	var msgdat = localStorage.getItem('MessDate');
+	var msgcode = parseInt(localStorage.getItem('MessId'));
 
 	var xmlHttp = new XMLHttpRequest();
 	xmlHttp.open(
 		'GET',
-		'http://127.0.0.1:55842/api/Reply/' + usermail + '/' + usermessage + '/' + replymsg + '/' + msgdat,
+		'http://127.0.0.1:55842/api/Reply/' +
+			usermail +
+			'/' +
+			usermessage +
+			'/' +
+			replymsg +
+			'/' +
+			msgdat +
+			'/' +
+			MessId,
 		false
 	); // false for synchronous request
 	xmlHttp.send();
